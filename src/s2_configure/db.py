@@ -19,7 +19,7 @@ api_key = os.environ.get('API_KEY')
 db_password = os.environ.get('DB_PASSWORD')
 
 # Connection to Server using HTTP Request
-base_url = "https://apis.smartcity.hn/bildungscampus/iotplatform/digitalbeehive/v1/authGroup/"
+base_url = os.environ.get('BASE_URL')
 
 
 def db_connection():
@@ -33,7 +33,7 @@ def db_connection():
 
         # Database connection
         conn = psycopg2.connect(
-            host="d71a3071-7535-48f1-8b24-d3887122b6a1.postgresql.eu01.onstackit.cloud",
+            host=os.environ.get("HOST"),
             database="beehappydb3",
             user="beehappyuser3",
             password=db_password,
