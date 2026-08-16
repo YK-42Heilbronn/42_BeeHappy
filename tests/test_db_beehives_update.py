@@ -18,7 +18,7 @@ db_password = os.getenv("DB_PASSWORD")
 
 # Database connection
 conn = psycopg2.connect(
-            host="d71a3071-7535-48f1-8b24-d3887122b6a1.postgresql.eu01.onstackit.cloud",
+            host=os.getenv("HOST"),
             database="beehappydb3",
             user="beehappyuser3",
             password=db_password,
